@@ -7,6 +7,9 @@ exports.handler = function(event, context, callback) {
     enabled_domains.push("coachgezocht.nu");
     enabled_domains.push("www.coachgezocht.nu");
 
+    console.log(event);
+    console.log(context);
+
     var url = event.url;
     var domain = extractDomain(url);
     var is_allowed = false;
