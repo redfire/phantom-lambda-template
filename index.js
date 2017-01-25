@@ -17,7 +17,7 @@ exports.handler = function(event, context, callback) {
     });
 
     phantom.on('exit', code => {
-        callback(null, 'fin!!');
+        callback(null, 'This is an integration test!!');
     });
 
 };
