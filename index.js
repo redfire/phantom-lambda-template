@@ -21,7 +21,8 @@ exports.handler = function(event, context, callback) {
         return;
     }
 
-    var phantom = phantomjs.exec('phantomjs-script.js', 'https://coachgezocht.nu');
+    console.log(url);
+    var phantom = phantomjs.exec('phantomjs-script.js', url);
     phantom.buffer = '';
     phantom.stdout.on('data', function(buf) {
         phantom.buffer += String(buf);
