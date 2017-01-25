@@ -8,7 +8,7 @@ if (system.args.length < 2) {
 var page = require('webpage').create();
 page.settings.loadImages = false;
 page.settings.localToRemoteUrlAccessEnabled = true;
-page.settings.resourceTimeout = 15000;
+page.settings.resourceTimeout = 30000;
 page.onCallback = function() {
     //console.log('callback');
     console.log(page.content);
@@ -24,7 +24,7 @@ page.onInitialized = function() {
         setTimeout(function() {
             //console.log('calling home');
             window.callPhantom();
-        }, 8500);
+        }, 15000);
     });
 };
 
